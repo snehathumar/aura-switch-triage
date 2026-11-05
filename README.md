@@ -32,5 +32,5 @@ We configured two collaborative agents inside our Switch room (`#aura-triage`):
 ### Setup Steps
 1. **Clone this repository:**
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/aura-switch-triage.git](https://github.com/YOUR-USERNAME/aura-switch-triage.git)
+   git clone [https://github.com/snehathumar/aura-switch-triage.git](https://github.com/snehathumar/aura-switch-triage.git)
    cd aura-switch-triage# aura-switch-triage
