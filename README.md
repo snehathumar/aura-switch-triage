@@ -30,27 +30,28 @@ We configured two collaborative agents inside our Switch room (`#aura-triage`):
 ---
 
 ## 🔄 Room Collaboration Flow
+
+```text
 [Incoming Alert: 5,420 Failed SSH Logins on Production Bastion]
-│
-▼
-#aura-triage (Switch Room)
-│
-▼
-[@aura-triager]
-"Critical Incident: SSH Brute Force detected on Bastion.
-Routing to @aura-repro for containment script."
-│
-▼
-[@aura-repro]
-"Remediation: iptables -I INPUT 1 -s 198.51.100.24 -p tcp --dport 22 -j DROP
-@Sneha please review and sign off."
-│
-▼
-[@Sneha: "Approved. Apply."]
-│
-▼
-[Threat Mitigated & Closed]
----
+                               │
+                               ▼
+                   #aura-triage (Switch Room)
+                               │
+                               ▼
+                       [@aura-triager]
+       "Critical Incident: SSH Brute Force detected on Bastion. 
+       Routing to @aura-repro for containment script."
+                               │
+                               ▼
+                       [@aura-repro]
+       "Remediation: iptables -I INPUT 1 -s 198.51.100.24 -p tcp --dport 22 -j DROP
+       @Sneha please review and sign off."
+                               │
+                               ▼
+                   [@Sneha: "Approved. Apply."]
+                               │
+                               ▼
+                    [Threat Mitigated & Closed]
 
 ## 🎙️ Built by Voice with Wispr Flow ($500 Track Submission)
 
@@ -73,17 +74,18 @@ This entire project—including agent system instructions, `aura-triage.yaml` co
 * A Discord, Slack, or Telegram bridge token
 * Any Switch-compatible agent provider (Gemini, Claude Code, OpenCode, or Codex)
 
-### Setup Steps
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/snehathumar/aura-switch-triage.git
-   cd aura-switch-triage
 
-1. **Launch Switch with the A.U.R.A. room config:**
+1.**Clone this repository:**
+git clone https://github.com/snehathumar/aura-switch-triage.git
+cd aura-switch-triage
+
+2. **Launch Switch with the A.U.R.A. room config:**
 Bash
 switch run --config aura-triage.yaml
-2. **Interact in your chat channel:**
+
+3. **Interact in your chat channel:**
 Drop a security alert into #aura-triage.
 Watch @aura-triager triage and hand off to @aura-repro.
 Human lead provides sign-off to mitigate!
+
 
