@@ -1,10 +1,17 @@
 # 🛡️ A.U.R.A. (Autonomous Unified Response Agents)
 **AI-Driven Cybersecurity Incident Triage & Mitigation Workflow built with Switch**
 
+> **Flip the Switch Hackathon Submission**  
+> **Team:** aura (Lead: @snehathumar)  
+> **Track:** Track 1 - Best Business Workflow ($2,000)  
+> **Side Tracks:** Code with Wispr ($500) | Best Blog Track (AirPods 5)
+
+---
+
 ## 📌 Overview
 Security and DevOps teams often lose critical response time sorting through noisy security alerts, server logs, and vulnerability reports across fragmented dashboards. **A.U.R.A.** brings automated, multi-agent cybersecurity incident triage directly into team chat using **Switch**.
 
-By turning a Discord or Telegram channel into a shared Switch Room, A.U.R.A. connects two specialized AI agents that collaborate with human security engineers in real time to classify threats and generate immediate containment scripts.
+By turning a Discord, Slack, or Telegram channel into a shared Switch Room, A.U.R.A. connects two specialized AI agents that collaborate with human security engineers in real time to classify threats and generate immediate containment scripts.
 
 ---
 
@@ -16,21 +23,73 @@ We configured two collaborative agents inside our Switch room (`#aura-triage`):
 * **`@aura-repro` (Remediation & Reproduction Agent):** Triggered automatically by `@aura-triager` for critical incidents. It writes a minimal verification script or firewall/patch command to isolate the threat and posts the exact remediation steps in the same thread for human sign-off.
 
 ### 2. Room & Chat Setup
-* **Platform:** Discord / Telegram bridged via Switch Console
+* **Platform:** Discord / Telegram / Slack bridged via Switch
 * **Room Name:** `aura-triage`
 * **Workflow:** Human teammates drop raw server logs or CVE alerts into the chat channel. Both agents read from the shared room log, hand off tasks autonomously via the Switch protocol, and wait for a human teammate to approve the final rollback or patch command.
+
+---
+
+## 🔄 Room Collaboration Flow
+[Incoming Alert: 5,420 Failed SSH Logins on Production Bastion]
+│
+▼
+#aura-triage (Switch Room)
+│
+▼
+[@aura-triager]
+"Critical Incident: SSH Brute Force detected on Bastion.
+Routing to @aura-repro for containment script."
+│
+▼
+[@aura-repro]
+"Remediation: iptables -I INPUT 1 -s 198.51.100.24 -p tcp --dport 22 -j DROP
+@Sneha please review and sign off."
+│
+▼
+[@Sneha: "Approved. Apply."]
+│
+▼
+[Threat Mitigated & Closed]
+---
+
+## 🎙️ Built by Voice with Wispr Flow ($500 Track Submission)
+
+This entire project—including agent system instructions, `aura-triage.yaml` configuration, and documentation—was created and dictated using **Wispr Flow**.
+
+### Wispr Flow Scorecard & Insights:
+- **Dictation Speed:** **148 Words Per Minute (Top 0.2%!)**
+- **AI Prompt Dictation:** **91% (53 AI Prompts Dictated)**
+- **Corrections Applied by Flow:** 22 fixes
+- **Active Streak:** 2 Days
+
+![Wispr Flow Scorecard](wispr-scorecard.png)
 
 ---
 
 ## 🚀 How to Run It
 
 ### Prerequisites
-* [Switch Console](https://github.com) installed on your machine (with Docker running)
-* A Discord Server or Telegram Group bridge token
-* Any Switch-compatible agent provider (Claude Code, OpenCode, or Codex)
+* [Switch](https://github.com/sandbox-quantum/switch) installed on your machine or cloud environment
+* A Discord, Slack, or Telegram bridge token
+* Any Switch-compatible agent provider (Gemini, Claude Code, OpenCode, or Codex)
 
 ### Setup Steps
 1. **Clone this repository:**
    ```bash
-   git clone [https://github.com/snehathumar/aura-switch-triage.git](https://github.com/snehathumar/aura-switch-triage.git)
-   cd aura-switch-triage# aura-switch-triage
+   git clone https://github.com/snehathumar/aura-switch-triage.git
+   cd aura-switch-triage
+
+1. **Launch Switch with the A.U.R.A. room config:**
+Bash
+switch run --config aura-triage.yaml
+2. **Interact in your chat channel:**
+Drop a security alert into #aura-triage.
+Watch @aura-triager triage and hand off to @aura-repro.
+Human lead provides sign-off to mitigate!
+**⚖️ License**
+Apache 2.0
+Code
+---
+
+Aap ise apne GitHub ke `README.md` mein paste karke **"Commit changes"** par click kar dein! Iske baad aapka GitHub repo 100% complete ho jayega.
+   
