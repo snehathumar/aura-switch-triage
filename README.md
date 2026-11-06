@@ -67,7 +67,7 @@ This entire project—including agent system instructions, `aura-triage.yaml` co
 - **Corrections Applied by Flow:** 25 fixes
 - **Active Streak:** 2 Days
 
-![Wispr Flow Scorecard](wispr-scorecard.png)
+![Wispr Flow Scorecard](wispr-scorecard--.png)
 
 ---
 
