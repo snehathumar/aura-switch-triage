@@ -53,14 +53,18 @@ We configured two collaborative agents inside our Switch room (`#aura-triage`):
                                ▼
                     [Threat Mitigated & Closed]
 
+ ```
+   ---
+
 ## 🎙️ Built by Voice with Wispr Flow ($500 Track Submission)
 
 This entire project—including agent system instructions, `aura-triage.yaml` configuration, and documentation—was created and dictated using **Wispr Flow**.
 
 ### Wispr Flow Scorecard & Insights:
-- **Dictation Speed:** **148 Words Per Minute (Top 0.2%!)**
-- **AI Prompt Dictation:** **91% (53 AI Prompts Dictated)**
-- **Corrections Applied by Flow:** 22 fixes
+- **Dictation Speed:** **152 Words Per Minute (Top 0.1% in the world!)**
+- **Total Words Dictated:** **576 Words**
+- **AI Prompt Dictation:** **53 AI Prompts Dictated**
+- **Corrections Applied by Flow:** 25 fixes
 - **Active Streak:** 2 Days
 
 ![Wispr Flow Scorecard](wispr-scorecard.png)
