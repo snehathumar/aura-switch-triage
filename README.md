@@ -86,10 +86,4 @@ switch run --config aura-triage.yaml
 Drop a security alert into #aura-triage.
 Watch @aura-triager triage and hand off to @aura-repro.
 Human lead provides sign-off to mitigate!
-**⚖️ License**
-Apache 2.0
-Code
----
 
-Aap ise apne GitHub ke `README.md` mein paste karke **"Commit changes"** par click kar dein! Iske baad aapka GitHub repo 100% complete ho jayega.
-   
